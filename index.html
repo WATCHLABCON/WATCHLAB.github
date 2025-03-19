@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WATCHHUB</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer>
+        function buscarTitulo() {
+            let input = document.getElementById("search-input").value.toLowerCase();
+            let imagenes = document.querySelectorAll(".grid img");
+            
+            imagenes.forEach(img => {
+                let titulo = img.alt.toLowerCase();
+                if (titulo.includes(input)) {
+                    img.style.display = "block";
+                } else {
+                    img.style.display = "none";
+                }
+            });
+        }
+
+        function mostrarModal(tipo) {
+            document.getElementById("modal").style.display = "block";
+            if (tipo === 'login') {
+                document.getElementById("login-form").style.display = "block";
+                document.getElementById("register-form").style.display = "none";
+            } else {
+                document.getElementById("login-form").style.display = "none";
+                document.getElementById("register-form").style.display = "block";
+            }
+        }
+
+        function cerrarModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Series ▼</a></li>
+                <li><a href="#">Películas ▼</a></li>
+                <li><a href="#">Géneros ▼</a></li>
+                <li class="search-bar">
+                    <input type="text" id="search-input" placeholder="Buscar títulos" onkeyup="buscarTitulo()">
+                    <button onclick="buscarTitulo()">🔍</button>
+                </li>
+                <li class="auth">
+                    <a href="#" onclick="mostrarModal('login')">Iniciar Sesión</a> | <a href="#" onclick="mostrarModal('register')">Registrarse</a>
+                </li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <div id="login-form">
+                <h2>Iniciar Sesión</h2>
+                <input type="text" placeholder="Usuario" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button>Ingresar</button>
+            </div>
+            <div id="register-form" style="display: none;">
+                <h2>Registrarse</h2>
+                <input type="text" placeholder="Usuario" required>
+                <input type="email" placeholder="Correo Electrónico" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button>Registrarse</button>
+            </div>
+        </div>
+    </div>
+    
+    <main>
+        <section class="category">
+            <h2>SERIES EN TENDENCIA ></h2>
+            <div class="grid">
+                <img src="IMG/euphoria.JPG" alt="Euphoria">
+                <img src="IMG/THE HAND.JPG" alt="The Handmaid's Tale">
+                <img src="IMG/STRANGER.JPG" alt="Stranger Things">
+                <img src="IMG/LOKI.JPG" alt="Loki">
+                <img src="IMG/WANDAVISION.JPG" alt="WandaVision">
+                <img src="IMG/SQUIDGAME.JPG" alt="Squid Game">
+                <img src="IMG/BRIDGERTON.JPG" alt="Bridgerton">
+                <img src="IMG/THE_BOYS.JPG" alt="The Boys">
+                <img src="IMG/MONEY_HEIST.JPG" alt="Money Heist">
+            </div>
+        </section>
+        <section class="category">
+            <h2>PELÍCULAS EN TENDENCIA ></h2>
+            <div class="grid">
+                <img src="IMG/Snoopy.jpg" alt="The Peanuts Movie">
+                <img src="IMG/MINIO.JPG" alt="Minions">
+                <img src="IMG/el padrino.JPG" alt="The Godfather">
+                <img src="IMG/INCEPTION.JPG" alt="Inception">
+                <img src="IMG/INTERSTELLAR.JPG" alt="Interstellar">
+                <img src="IMG/JOHNWICK.JPG" alt="John Wick">
+                <img src="IMG/DUNE.JPG" alt="Dune">
+                <img src="IMG/TITANIC.JPG" alt="Titanic">
+                <img src="IMG/MADMAX.JPG" alt="Mad Max: Fury Road">
+                <img src="IMG/JOKER.JPG" alt="Joker">
+            </div>
+        </section>
+       <section class="category">
+            <h2>ACLAMADOS POR LA CRÍTICA ></h2>
+            <div class="grid">
+                <img src="IMG/BR.JPG" alt="Breaking Bad">
+                <img src="IMG/THELAS.JPG" alt="The Last of Us">
+                <img src="IMG/CHE.JPG" alt="Chernobyl">
+                <img src="IMG/GOT.JPG" alt="Game of Thrones">
+                <img src="IMG/SHERLOCK.JPG" alt="Sherlock">
+                <img src="IMG/THEWIRE.JPG" alt="The Wire">
+                <img src="IMG/FARGO.JPG" alt="Fargo">
+                <img src="IMG/TRUEDETECTIVE.JPG" alt="True Detective">
+                <img src="IMG/MADMEN.JPG" alt="Mad Men">
+                <img src="IMG/BLACKMIRROR.JPG" alt="Black Mirror">
+                <img src="IMG/THEWESTWING.JPG" alt="The West Wing">
+            </div>
+        </section>
+        <section class="category">
+            <h2>CLÁSICOS IMPERDIBLES ></h2>
+            <div class="grid">
+                <img src="IMG/SCARFACE.JPG" alt="Scarface">
+                <img src="IMG/PULPFICTION.JPG" alt="Pulp Fiction">
+                <img src="IMG/FIGHTCLUB.JPG" alt="Fight Club">
+                <img src="IMG/FORRESTGUMP.JPG" alt="Forrest Gump">
+                <img src="IMG/GLADIATOR.JPG" alt="Gladiator">
+                <img src="IMG/MATRIX.JPG" alt="The Matrix">
+                <img src="IMG/SHAWSHANK.JPG" alt="The Shawshank Redemption">
+                <img src="IMG/GOODFELLAS.JPG" alt="Goodfellas">
+                <img src="IMG/CITIZENKANE.JPG" alt="Citizen Kane">
+                <img src="IMG/PSYCHO.JPG" alt="Psycho">
+                <img src="IMG/SEVEN.JPG" alt="Seven">
+            </div>
+        </section>
+
+         <section class="category">
+            <h2>Películas de moda ></h2>
+            <div class="carousel">
+                <button class="prev" onclick="moverCarrusel(this, -1)">❮</button>
+                <div class="carousel-container">
+                    <img src="IMG/VAINA2.JPG" alt="Vaiana 2">
+                    <img src="IMG/ANORA.JPG" alt="Anora">
+                    <img src="IMG/DELICIA.JPG" alt="Delicia">
+                    <img src="IMG/LA_SUSTANCIA.JPG" alt="La Sustancia">
+                    <img src="IMG/CAPITAN.JPG" alt="Capitán América: Un Nuevo Mundo">
+                    <img src="IMG/OPPENHEIMER.JPG" alt="Oppenheimer">
+                    <img src="IMG/BARBIE.JPG" alt="Barbie">
+                    <img src="IMG/AVATAR2.JPG" alt="Avatar 2">
+                    <img src="IMG/SPIDER_VERSE.JPG" alt="Spider-Man: Across the Spider-Verse">
+                </div>
+                <button class="next" onclick="moverCarrusel(this, 1)">❯</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 WATCHHUB. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
