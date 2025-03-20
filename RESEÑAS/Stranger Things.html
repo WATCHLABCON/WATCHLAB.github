@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stranger Things</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scriptST.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Series ▼</a></li>
+                <li><a href="#">Películas ▼</a></li>
+                <li class="search-bar">
+                    <input type="text" placeholder="Buscar títulos">
+                    <button>🔍</button>
+                </li>
+                <li class="auth">
+                    <a href="#">Iniciar Sesión</a> | <a href="#">Registrarse</a>
+                </li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    
+    <main>
+        <section class="show">
+            <img src="IMG/stranger things.jpg" alt="Póster de Stranger Things">
+            <div class="show-info">
+                <h1>Stranger Things</h1>
+                <p>⭐⭐⭐⭐⭐ Ciencia Ficción, Misterio, Aventura</p>
+                <p>Cuando un niño desaparece en la ciudad de Hawkins, Indiana, un grupo de amigos descubre una serie de experimentos secretos, fenómenos sobrenaturales y una misteriosa niña con poderes extraordinarios.</p>
+                <button onclick="playTrailer()">Reproducir Tráiler</button>
+                
+                <!-- Contenedor del tráiler -->
+                <div id="trailer-container" style="display: none;">
+                    <iframe id="trailer-video" width="560" height="315" src="https://www.youtube.com/embed/b9EkMc79ZSU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+
+                <p>Disponible en:</p>
+                <ul class="streaming-platforms">
+                    <li><a href="https://www.netflix.com/" target="_blank"><img src="IMG/netflix.jpg" alt="Netflix"> Ver en Netflix</a></li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="cast">
+            <h2>Reparto</h2>
+            <div class="cast-list">
+                <div class="actor">
+                    <img src="IMG/MILLIE.jpg" alt="Millie Bobby Brown como Eleven">
+                    <p>Millie Bobby Brown<br><span>Eleven</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/FINN.jpg" alt="Finn Wolfhard como Mike Wheeler">
+                    <p>Finn Wolfhard<br><span>Mike Wheeler</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/GATEN.jpg" alt="Gaten Matarazzo como Dustin Henderson">
+                    <p>Gaten Matarazzo<br><span>Dustin Henderson</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/CALEB.jpg" alt="Caleb McLaughlin como Lucas Sinclair">
+                    <p>Caleb McLaughlin<br><span>Lucas Sinclair</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/SADIE.jpg" alt="Sadie Sink como Max Mayfield">
+                    <p>Sadie Sink<br><span>Max Mayfield</span></p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="comments-section">
+            <h2>Deja un comentario</h2>
+            <form id="comment-form">
+                <textarea id="comment-input" placeholder="Escribe tu comentario aquí..." rows="4" cols="50"></textarea><br><br>
+                <button type="button" onclick="submitComment()">Comentar</button>
+            </form>
+            <h3>Comentarios:</h3>
+            <div id="comments-list"></div>
+        </section>
+        
+        <section class="related-content">
+            <h2>La gente también ha visto</h2>
+            <div class="related-list">
+                <div class="show-thumb">Dark</div>
+                <div class="show-thumb">The OA</div>
+                <div class="show-thumb">Locke & Key</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

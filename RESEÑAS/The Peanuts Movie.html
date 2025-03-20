@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Peanuts Movie</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scriptTPM.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Series ▼</a></li>
+                <li><a href="#">Películas ▼</a></li>
+                <li class="search-bar">
+                    <input type="text" placeholder="Buscar títulos">
+                    <button>🔍</button>
+                </li>
+                <li class="auth">
+                    <a href="#">Iniciar Sesión</a> | <a href="#">Registrarse</a>
+                </li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    
+    <main>
+        <section class="show">
+            <img src="IMG/pea.jpg" alt="Póster de The Peanuts Movie">
+            <div class="show-info">
+                <h1>The Peanuts Movie</h1>
+                <p>⭐⭐⭐⭐⭐ Animación, Comedia, Aventura</p>
+                <p>Charlie Brown, Snoopy, Lucy, Linus y el resto de la querida pandilla de "Peanuts" hacen su debut en la gran pantalla en esta divertida y emotiva aventura animada en 3D.</p>
+                <button onclick="playTrailer()">Reproducir Tráiler</button>
+                
+                <!-- Contenedor del tráiler -->
+                <div id="trailer-container" style="display: none;">
+                    <iframe id="trailer-video" width="560" height="315" src="https://www.youtube.com/embed/zQpN9V9H6z0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+
+                <p>Disponible en:</p>
+                <ul class="streaming-platforms">
+                    <li><a href="https://www.disneyplus.com/" target="_blank"><img src="IMG/DISNEY.jpg" alt="Disney+"> Ver en Disney+</a></li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="cast">
+            <h2>Reparto (Voces)</h2>
+            <div class="cast-list">
+                <div class="actor">
+                    <img src="IMG/NOAH.jpg" alt="Noah Schnapp como Charlie Brown">
+                    <p>Noah Schnapp<br><span>Charlie Brown</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/BILL.jpg" alt="Bill Melendez como Snoopy / Woodstock">
+                    <p>Bill Melendez<br><span>Snoopy / Woodstock</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/HADLEY.jpg" alt="Hadley Belle Miller como Lucy">
+                    <p>Hadley Belle Miller<br><span>Lucy</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/ALEX.jpg" alt="Alex Garfin como Linus">
+                    <p>Alex Garfin<br><span>Linus</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/FRANCESCA.jpg" alt="Francesca Capaldi como Little Red-Haired Girl">
+                    <p>Francesca Capaldi<br><span>Little Red-Haired Girl</span></p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="comments-section">
+            <h2>Deja un comentario</h2>
+            <form id="comment-form">
+                <textarea id="comment-input" placeholder="Escribe tu comentario aquí..." rows="4" cols="50"></textarea><br><br>
+                <button type="button" onclick="submitComment()">Comentar</button>
+            </form>
+            <h3>Comentarios:</h3>
+            <div id="comments-list"></div>
+        </section>
+        
+        <section class="related-content">
+            <h2>La gente también ha visto</h2>
+            <div class="related-list">
+                <div class="show-thumb">Toy Story</div>
+                <div class="show-thumb">Paddington</div>
+                <div class="show-thumb">The Lego Movie</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

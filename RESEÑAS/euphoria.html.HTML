@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Euphoria</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Series ▼</a></li>
+                <li><a href="#">Películas ▼</a></li>
+                <li><a href="#">Géneros ▼</a></li>
+                <li class="search-bar">
+                    <input type="text" placeholder="Buscar títulos">
+                    <button>🔍</button>
+                </li>
+                <li class="auth">
+                    <a href="#">Iniciar Sesión</a> | <a href="#">Registrarse</a>
+                </li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    
+    <main>
+        <section class="show">
+            <img src="IMG/euphoria.jpg" alt="Póster de Euphoria">
+            <div class="show-info">
+                <h1>Euphoria</h1>
+                <p>⭐⭐⭐⭐⭐ Drama, Adolescencia</p>
+                <p>Una exploración cruda de la vida de un grupo de estudiantes de secundaria mientras navegan por un mundo de drogas, traumas, amor y amistad.</p>
+                <button onclick="playTrailer()">Reproducir Tráiler</button>
+                
+                <!-- Contenedor del tráiler -->
+                <div id="trailer-container" style="display: none;">
+                    <iframe id="trailer-video" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+
+                <p>Disponible en:</p>
+                <ul class="streaming-platforms">
+                    <li><a href="https://www.max.com/" target="_blank"><img src="IMG/hbo.jpg" alt="HBO Max"> Ver en HBO Max</a></li>
+                    <li><a href="https://www.primevideo.com" target="_blank"><img src="IMG/amazon-prime.jpg" alt="Amazon Prime"> Ver en Amazon Prime</a></li>
+                </ul>
+            </div>
+        </section>
+        
+        
+        
+        <section class="cast">
+            <h2>Reparto</h2>
+            <div class="cast-list">
+                <div class="actor">
+                    <img src="IMG/zendaya.jpg" alt="Zendaya como Rue Bennett">
+                    <p>Zendaya<br><span>Rue Bennett</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/hunter.jpg" alt="Hunter Schafer como Jules Vaughn">
+                    <p>Hunter Schafer<br><span>Jules Vaughn</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/jacob.jpg" alt="Jacob Elordi como Nate Jacobs">
+                    <p>Jacob Elordi<br><span>Nate Jacobs</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/alexa.jpg" alt="Alexa Demie como Maddy Perez">
+                    <p>Alexa Demie<br><span>Maddy Perez</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/barbie.jpg" alt="Barbie Ferreira como Kat Hernandez">
+                    <p>Barbie Ferreira<br><span>Kat Hernandez</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/SIDNEY.jpg" alt="Sydney Sweeney como Cassie Howard">
+                    <p>Sydney Sweeney<br><span>Cassie Howard</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/maude.jpg" alt="Maude Apatow como Lexi Howard">
+                    <p>Maude Apatow<br><span>Lexi Howard</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/angus.jpg" alt="Angus Cloud como Fezco">
+                    <p>Angus Cloud<br><span>Fezco</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/storm.jpg" alt="Storm Reid como Gia Bennett">
+                    <p>Storm Reid<br><span>Gia Bennett</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/colman.jpg" alt="Colman Domingo como Ali">
+                    <p>Colman Domingo<br><span>Ali</span></p>
+                </div>
+            </div>
+        </section>
+         <section class="comments-section">
+            <h2>Deja un comentario</h2>
+            <form id="comment-form">
+                <textarea id="comment-input" placeholder="Escribe tu comentario aquí..." rows="4" cols="50"></textarea><br><br>
+                <button type="button" onclick="submitComment()">Comentar</button>
+            </form>
+
+            <h3>Comentarios:</h3>
+            <div id="comments-list">
+                <!-- Aquí se mostrarán los comentarios -->
+            </div>
+        </section>
+        <section class="related">
+            <h2>La gente también ha visto</h2>
+            <div class="related-list">
+                <div class="show-thumb">Skins</div>
+                <div class="show-thumb">13 Reasons Why</div>
+                <div class="show-thumb">Elite</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
