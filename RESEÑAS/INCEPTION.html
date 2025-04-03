@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stranger Things</title>
+    <title>Inception</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scriptST.js" defer></script>
+    <script src="scriptINCEPTION.js" defer></script>
 </head>
 <body>
     <header>
@@ -28,21 +28,21 @@
     
     <main>
         <section class="show">
-            <img src="IMG/stranger_things.jpg" alt="Póster de Stranger Things">
+            <img src="IMG/inception.jpg" alt="Póster de Inception">
             <div class="show-info">
-                <h1>Stranger Things</h1>
-                <p>⭐⭐⭐⭐⭐ Ciencia Ficción, Misterio, Aventura</p>
-                <p>Cuando un niño desaparece en la ciudad de Hawkins, Indiana, un grupo de amigos descubre una serie de experimentos secretos, fenómenos sobrenaturales y una misteriosa niña con poderes extraordinarios.</p>
+                <h1>Inception</h1>
+                <p>⭐⭐⭐⭐⭐ Ciencia Ficción, Acción, Suspenso</p>
+                <p>*Inception* sigue a Dom Cobb, un ladrón especializado en extraer secretos del subconsciente de las personas a través de los sueños. Se le ofrece una oportunidad de redención si logra una tarea imposible: implantar una idea en la mente de alguien.</p>
                 <button onclick="playTrailer()">Reproducir Tráiler</button>
                 
-                <!-- Contenedor del tráiler -->
                 <div id="trailer-container" style="display: none;">
-                    <iframe id="trailer-video" width="560" height="315" src="https://www.youtube.com/embed/b9EkMc79ZSU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <iframe id="trailer-video" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
 
                 <p>Disponible en:</p>
                 <ul class="streaming-platforms">
                     <li><a href="https://www.netflix.com/" target="_blank"><img src="IMG/netflix.jpg" alt="Netflix"> Ver en Netflix</a></li>
+                    <li><a href="https://www.hbomax.com/" target="_blank"><img src="IMG/hbo.jpg" alt="HBO Max"> Ver en HBO Max</a></li>
                 </ul>
             </div>
         </section>
@@ -51,24 +51,28 @@
             <h2>Reparto</h2>
             <div class="cast-list">
                 <div class="actor">
-                    <img src="IMG/MILLIE.jpg" alt="Millie Bobby Brown como Eleven">
-                    <p>Millie Bobby Brown<br><span>Eleven</span></p>
+                    <img src="IMG/dicaprio.jpg" alt="Leonardo DiCaprio como Dom Cobb">
+                    <p>Leonardo DiCaprio<br><span>Dom Cobb</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/FINN.jpg" alt="Finn Wolfhard como Mike Wheeler">
-                    <p>Finn Wolfhard<br><span>Mike Wheeler</span></p>
+                    <img src="IMG/joseph.jpg" alt="Joseph Gordon-Levitt como Arthur">
+                    <p>Joseph Gordon-Levitt<br><span>Arthur</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/GATEN.jpg" alt="Gaten Matarazzo como Dustin Henderson">
-                    <p>Gaten Matarazzo<br><span>Dustin Henderson</span></p>
+                    <img src="IMG/ellen.jpg" alt="Elliot Page como Ariadne">
+                    <p>Elliot Page<br><span>Ariadne</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/CALEB.jpg" alt="Caleb McLaughlin como Lucas Sinclair">
-                    <p>Caleb McLaughlin<br><span>Lucas Sinclair</span></p>
+                    <img src="IMG/tom.jpg" alt="Tom Hardy como Eames">
+                    <p>Tom Hardy<br><span>Eames</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/SADIE.jpg" alt="Sadie Sink como Max Mayfield">
-                    <p>Sadie Sink<br><span>Max Mayfield</span></p>
+                    <img src="IMG/marion.jpg" alt="Marion Cotillard como Mal">
+                    <p>Marion Cotillard<br><span>Mal</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/michael.jpg" alt="Michael Caine como Miles">
+                    <p>Michael Caine<br><span>Miles</span></p>
                 </div>
             </div>
         </section>
@@ -82,21 +86,18 @@
             <h3>Comentarios:</h3>
             <div id="comments-list"></div>
         </section>
-        
-        <section class="related">
-            <h2>La gente también ha visto</h2>
+
+        <section class="related-content">
+            <h2>Películas Relacionadas</h2>
             <div class="related-list">
-                <div class="show-thumb">
-                    <img src="IMG/dark.jpg" alt="Dark">
-                    <p>Dark</p>
+                <div class="show-thumb"> <img src="IMG/interstellar.jpg" alt="Interstellar">
+                    <p>Interstellar</p>
                 </div>
-                <div class="show-thumb">
-                    <img src="IMG/the_oa.jpg" alt="The OA">
-                    <p>The OA</p>
+                <div class="show-thumb"><img src="IMG/tenet.jpg" alt="Tenet">
+                    <p>Tenet</p>
                 </div>
-                <div class="show-thumb">
-                    <img src="IMG/locke_key.jpg" alt="Locke & Key">
-                    <p>Locke & Key</p>
+                <div class="show-thumb"><img src="IMG/memento.jpg" alt="Memento">
+                    <p>Memento</p>
                 </div>
             </div>
         </section>

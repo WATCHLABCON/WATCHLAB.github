@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stranger Things</title>
+    <title>Mad Max: Furia en la Carretera</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scriptST.js" defer></script>
+    <script src="scriptMADMAX.js" defer></script>
 </head>
 <body>
     <header>
@@ -28,16 +28,15 @@
     
     <main>
         <section class="show">
-            <img src="IMG/stranger_things.jpg" alt="Póster de Stranger Things">
+            <img src="IMG/madmax.jpg" alt="Póster de Mad Max: Furia en la Carretera">
             <div class="show-info">
-                <h1>Stranger Things</h1>
-                <p>⭐⭐⭐⭐⭐ Ciencia Ficción, Misterio, Aventura</p>
-                <p>Cuando un niño desaparece en la ciudad de Hawkins, Indiana, un grupo de amigos descubre una serie de experimentos secretos, fenómenos sobrenaturales y una misteriosa niña con poderes extraordinarios.</p>
+                <h1>Mad Max: Furia en la Carretera</h1>
+                <p>⭐⭐⭐⭐⭐ Acción, Ciencia Ficción, Aventura</p>
+                <p><em>Mad Max: Furia en la Carretera</em> es una explosiva historia de supervivencia ambientada en un futuro post-apocalíptico, donde Max se asocia con Furiosa para huir de un tirano y su ejército en un desierto implacable.</p>
                 <button onclick="playTrailer()">Reproducir Tráiler</button>
                 
-                <!-- Contenedor del tráiler -->
                 <div id="trailer-container" style="display: none;">
-                    <iframe id="trailer-video" width="560" height="315" src="https://www.youtube.com/embed/b9EkMc79ZSU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <iframe id="trailer-video" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
 
                 <p>Disponible en:</p>
@@ -51,24 +50,28 @@
             <h2>Reparto</h2>
             <div class="cast-list">
                 <div class="actor">
-                    <img src="IMG/MILLIE.jpg" alt="Millie Bobby Brown como Eleven">
-                    <p>Millie Bobby Brown<br><span>Eleven</span></p>
+                    <img src="IMG/tom_hardy.jpg" alt="Tom Hardy como Max Rockatansky">
+                    <p>Tom Hardy<br><span>Max Rockatansky</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/FINN.jpg" alt="Finn Wolfhard como Mike Wheeler">
-                    <p>Finn Wolfhard<br><span>Mike Wheeler</span></p>
+                    <img src="IMG/charlize_theron.jpg" alt="Charlize Theron como Imperator Furiosa">
+                    <p>Charlize Theron<br><span>Imperator Furiosa</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/GATEN.jpg" alt="Gaten Matarazzo como Dustin Henderson">
-                    <p>Gaten Matarazzo<br><span>Dustin Henderson</span></p>
+                    <img src="IMG/nicholas_hoult.jpg" alt="Nicholas Hoult como Nux">
+                    <p>Nicholas Hoult<br><span>Nux</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/CALEB.jpg" alt="Caleb McLaughlin como Lucas Sinclair">
-                    <p>Caleb McLaughlin<br><span>Lucas Sinclair</span></p>
+                    <img src="IMG/hugh_kee.jpg" alt="Hugh Keays-Byrne como Immortan Joe">
+                    <p>Hugh Keays-Byrne<br><span>Immortan Joe</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/SADIE.jpg" alt="Sadie Sink como Max Mayfield">
-                    <p>Sadie Sink<br><span>Max Mayfield</span></p>
+                    <img src="IMG/zoe_kravitz.jpg" alt="Zoë Kravitz como Toast the Knowing">
+                    <p>Zoë Kravitz<br><span>Toast the Knowing</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/riley_keough.jpg" alt="Riley Keough como Capable">
+                    <p>Riley Keough<br><span>Capable</span></p>
                 </div>
             </div>
         </section>
@@ -82,21 +85,18 @@
             <h3>Comentarios:</h3>
             <div id="comments-list"></div>
         </section>
-        
-        <section class="related">
+
+        <section class="related-content">
             <h2>La gente también ha visto</h2>
             <div class="related-list">
-                <div class="show-thumb">
-                    <img src="IMG/dark.jpg" alt="Dark">
-                    <p>Dark</p>
+                <div class="show-thumb"><img src="IMG/road_warrior.jpg" alt="Mad Max 2: El Guerrero de la Carretera">
+                    <p>Mad Max 2: El Guerrero de la Carretera</p>
                 </div>
-                <div class="show-thumb">
-                    <img src="IMG/the_oa.jpg" alt="The OA">
-                    <p>The OA</p>
+                <div class="show-thumb"><img src="IMG/terminator.jpg" alt="Terminator 2: Judgment Day">
+                    <p>Terminator 2: Judgment Day</p>
                 </div>
-                <div class="show-thumb">
-                    <img src="IMG/locke_key.jpg" alt="Locke & Key">
-                    <p>Locke & Key</p>
+                <div class="show-thumb"><img src="IMG/the_book_of_eli.jpg" alt="El Libro de Eli">
+                    <p>El Libro de Eli</p>
                 </div>
             </div>
         </section>

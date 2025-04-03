@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stranger Things</title>
+    <title>Titanic</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scriptST.js" defer></script>
+    <script src="scriptTITANIC.js" defer></script>
 </head>
 <body>
     <header>
@@ -28,16 +28,15 @@
     
     <main>
         <section class="show">
-            <img src="IMG/stranger_things.jpg" alt="Póster de Stranger Things">
+            <img src="IMG/titanic.jpg" alt="Póster de Titanic">
             <div class="show-info">
-                <h1>Stranger Things</h1>
-                <p>⭐⭐⭐⭐⭐ Ciencia Ficción, Misterio, Aventura</p>
-                <p>Cuando un niño desaparece en la ciudad de Hawkins, Indiana, un grupo de amigos descubre una serie de experimentos secretos, fenómenos sobrenaturales y una misteriosa niña con poderes extraordinarios.</p>
+                <h1>Titanic</h1>
+                <p>⭐⭐⭐⭐⭐ Drama, Romance</p>
+                <p><em>Titanic</em> narra la historia de amor entre Jack y Rose, dos jóvenes de diferentes clases sociales que se conocen a bordo del trágico transatlántico Titanic. En medio del desastre, luchan por sobrevivir mientras enfrentan la inmensidad del mar y las dificultades de la vida.</p>
                 <button onclick="playTrailer()">Reproducir Tráiler</button>
                 
-                <!-- Contenedor del tráiler -->
                 <div id="trailer-container" style="display: none;">
-                    <iframe id="trailer-video" width="560" height="315" src="https://www.youtube.com/embed/b9EkMc79ZSU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <iframe id="trailer-video" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
 
                 <p>Disponible en:</p>
@@ -51,24 +50,28 @@
             <h2>Reparto</h2>
             <div class="cast-list">
                 <div class="actor">
-                    <img src="IMG/MILLIE.jpg" alt="Millie Bobby Brown como Eleven">
-                    <p>Millie Bobby Brown<br><span>Eleven</span></p>
+                    <img src="IMG/leonardo.jpg" alt="Leonardo DiCaprio como Jack Dawson">
+                    <p>Leonardo DiCaprio<br><span>Jack Dawson</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/FINN.jpg" alt="Finn Wolfhard como Mike Wheeler">
-                    <p>Finn Wolfhard<br><span>Mike Wheeler</span></p>
+                    <img src="IMG/kate.jpg" alt="Kate Winslet como Rose DeWitt Bukater">
+                    <p>Kate Winslet<br><span>Rose DeWitt Bukater</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/GATEN.jpg" alt="Gaten Matarazzo como Dustin Henderson">
-                    <p>Gaten Matarazzo<br><span>Dustin Henderson</span></p>
+                    <img src="IMG/billy.jpg" alt="Billy Zane como Cal Hockley">
+                    <p>Billy Zane<br><span>Cal Hockley</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/CALEB.jpg" alt="Caleb McLaughlin como Lucas Sinclair">
-                    <p>Caleb McLaughlin<br><span>Lucas Sinclair</span></p>
+                    <img src="IMG/danny.jpg" alt="Danny Nucci como Fabrizio">
+                    <p>Danny Nucci<br><span>Fabrizio</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/SADIE.jpg" alt="Sadie Sink como Max Mayfield">
-                    <p>Sadie Sink<br><span>Max Mayfield</span></p>
+                    <img src="IMG/david.jpg" alt="David Warner como Spicer Lovejoy">
+                    <p>David Warner<br><span>Spicer Lovejoy</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/jonathan.jpg" alt="Jonathan Hyde como J. Bruce Ismay">
+                    <p>Jonathan Hyde<br><span>J. Bruce Ismay</span></p>
                 </div>
             </div>
         </section>
@@ -82,21 +85,18 @@
             <h3>Comentarios:</h3>
             <div id="comments-list"></div>
         </section>
-        
-        <section class="related">
+
+        <section class="related-content">
             <h2>La gente también ha visto</h2>
             <div class="related-list">
-                <div class="show-thumb">
-                    <img src="IMG/dark.jpg" alt="Dark">
-                    <p>Dark</p>
+                <div class="show-thumb"><img src="IMG/the_notebook.jpg" alt="The Notebook">
+                    <p>The Notebook</p>
                 </div>
-                <div class="show-thumb">
-                    <img src="IMG/the_oa.jpg" alt="The OA">
-                    <p>The OA</p>
+                <div class="show-thumb"><img src="IMG/ps_i_love_you.jpg" alt="P.S. I Love You">
+                    <p>P.S. I Love You</p>
                 </div>
-                <div class="show-thumb">
-                    <img src="IMG/locke_key.jpg" alt="Locke & Key">
-                    <p>Locke & Key</p>
+                <div class="show-thumb"><img src="IMG/pearl_harbor.jpg" alt="Pearl Harbor">
+                    <p>Pearl Harbor</p>
                 </div>
             </div>
         </section>

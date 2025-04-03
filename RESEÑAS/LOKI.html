@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stranger Things</title>
+    <title>Loki</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scriptST.js" defer></script>
+    <script src="scripLOK.js" defer></script>
 </head>
 <body>
     <header>
         <nav>
             <ul>
                 <li><a href="#">Series ▼</a></li>
-                <li><a href="#">Películas ▼</a></li>
+                <li><a href="#">Películas ▼</a></li> 
                 <li><a href="#">Géneros ▼</a></li>
                 <li class="search-bar">
                     <input type="text" placeholder="Buscar títulos">
@@ -28,21 +28,21 @@
     
     <main>
         <section class="show">
-            <img src="IMG/stranger_things.jpg" alt="Póster de Stranger Things">
+            <img src="IMG/loki.jpg" alt="">
             <div class="show-info">
-                <h1>Stranger Things</h1>
-                <p>⭐⭐⭐⭐⭐ Ciencia Ficción, Misterio, Aventura</p>
-                <p>Cuando un niño desaparece en la ciudad de Hawkins, Indiana, un grupo de amigos descubre una serie de experimentos secretos, fenómenos sobrenaturales y una misteriosa niña con poderes extraordinarios.</p>
+                <h1>Loki</h1>
+                <p>⭐⭐⭐⭐⭐ Acción, Aventura, Fantasía, Ciencia Ficción</p>
+                <p>Después de robar el Teseracto durante los eventos de "Avengers: Endgame", una versión alternativa de Loki (Tom Hiddleston) es capturada por la Autoridad de Variación del Tiempo (TVA), una organización burocrática que existe fuera del tiempo y el espacio y supervisa la línea temporal. Obligado a ayudar a reparar las alteraciones en la línea temporal, Loki se embarca en una aventura que desafiará su concepto de realidad y destino.</p>
                 <button onclick="playTrailer()">Reproducir Tráiler</button>
                 
                 <!-- Contenedor del tráiler -->
                 <div id="trailer-container" style="display: none;">
-                    <iframe id="trailer-video" width="560" height="315" src="https://www.youtube.com/embed/b9EkMc79ZSU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <iframe id="trailer-video" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
 
                 <p>Disponible en:</p>
                 <ul class="streaming-platforms">
-                    <li><a href="https://www.netflix.com/" target="_blank"><img src="IMG/netflix.jpg" alt="Netflix"> Ver en Netflix</a></li>
+                    <li><a href="https://www.disneyplus.com/" target="_blank"><img src="IMG/DISNEY     .jpg" alt="Disney+"> Ver en Disney+</a></li>
                 </ul>
             </div>
         </section>
@@ -51,57 +51,71 @@
             <h2>Reparto</h2>
             <div class="cast-list">
                 <div class="actor">
-                    <img src="IMG/MILLIE.jpg" alt="Millie Bobby Brown como Eleven">
-                    <p>Millie Bobby Brown<br><span>Eleven</span></p>
+                    <img src="IMG/tom_hiddleston.jpg" alt="Tom Hiddleston como Loki">
+                    <p>Tom Hiddleston<br><span>Loki</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/FINN.jpg" alt="Finn Wolfhard como Mike Wheeler">
-                    <p>Finn Wolfhard<br><span>Mike Wheeler</span></p>
+                    <img src="IMG/owen_wilson.jpg" alt="Owen Wilson como Mobius M. Mobius">
+                    <p>Owen Wilson<br><span>Mobius M. Mobius</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/GATEN.jpg" alt="Gaten Matarazzo como Dustin Henderson">
-                    <p>Gaten Matarazzo<br><span>Dustin Henderson</span></p>
+                    <img src="IMG/gugu_mbatha_raw.jpg" alt="Gugu Mbatha-Raw como Ravonna Renslayer">
+                    <p>Gugu Mbatha-Raw<br><span>Ravonna Renslayer</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/CALEB.jpg" alt="Caleb McLaughlin como Lucas Sinclair">
-                    <p>Caleb McLaughlin<br><span>Lucas Sinclair</span></p>
+                    <img src="IMG/sophia_di_martino.jpg" alt="Sophia Di Martino como Sylvie">
+                    <p>Sophia Di Martino<br><span>Sylvie</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/SADIE.jpg" alt="Sadie Sink como Max Mayfield">
-                    <p>Sadie Sink<br><span>Max Mayfield</span></p>
+                    <img src="IMG/wunmi_mosaku.jpg" alt="Wunmi Mosaku como Hunter B-15">
+                    <p>Wunmi Mosaku<br><span>Hunter B-15</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/richard_e_grant.jpg" alt="Richard E. Grant como Classic Loki">
+                    <p>Richard E. Grant<br><span>Classic Loki</span></p>
                 </div>
             </div>
         </section>
-        
+
         <section class="comments-section">
             <h2>Deja un comentario</h2>
             <form id="comment-form">
                 <textarea id="comment-input" placeholder="Escribe tu comentario aquí..." rows="4" cols="50"></textarea><br><br>
                 <button type="button" onclick="submitComment()">Comentar</button>
             </form>
+
             <h3>Comentarios:</h3>
-            <div id="comments-list"></div>
+            <div id="comments-list">
+                <!-- Aquí se mostrarán los comentarios -->
+            </div>
         </section>
-        
         <section class="related">
+       <section class="related">
             <h2>La gente también ha visto</h2>
             <div class="related-list">
                 <div class="show-thumb">
-                    <img src="IMG/dark.jpg" alt="Dark">
-                    <p>Dark</p>
+                    <img src="IMG/wandavision.jpg" alt="WandaVision">
+                    <p>WandaVision</p>
                 </div>
                 <div class="show-thumb">
-                    <img src="IMG/the_oa.jpg" alt="The OA">
-                    <p>The OA</p>
+                    <img src="IMG/falcon_winter_soldier.jpg" alt="The Falcon and the Winter Soldier">
+                    <p>The Falcon and the Winter Soldier</p>
                 </div>
                 <div class="show-thumb">
-                    <img src="IMG/locke_key.jpg" alt="Locke & Key">
-                    <p>Locke & Key</p>
+                    <img src="IMG/what_if.jpg" alt="What If...?">
+                    <p>What If...?</p>
+                </div>
+                <div class="show-thumb">
+                    <img src="IMG/hawkeye.jpg" alt="Hawkeye">
+                    <p>Hawkeye</p>
+                </div>
+                <div class="show-thumb">
+                    <img src="IMG/ms_marvel.jpg" alt="Ms. Marvel">
+                    <p>Ms. Marvel</p>
                 </div>
             </div>
         </section>
-        
-        <section class="contacto">
+          <section class="contacto">
             <h2>Contacto</h2>
             <p>Si tienes preguntas o comentarios, no dudes en ponerte en contacto con nosotros:</p>
             <ul>
@@ -123,6 +137,6 @@
                 </li>
             </ul>
         </section>
-    </main>
+     </main>
 </body>
 </html>
