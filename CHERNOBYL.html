@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chernobyl</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scriptChernobyl.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Series ▼</a></li>
+                <li><a href="#">Películas ▼</a></li>
+                <li class="search-bar">
+                    <input type="text" placeholder="Buscar títulos">
+                    <button>🔍</button>
+                </li>
+                <li class="auth">
+                    <a href="#">Iniciar Sesión</a> | <a href="#">Registrarse</a>
+                </li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    
+    <main>
+        <section class="show">
+            <img src="IMG/chernobyl.jpg" alt="Póster de Chernobyl">
+            <div class="show-info">
+                <h1>Chernobyl</h1>
+                <p>⭐⭐⭐⭐⭐ Drama, Historia, Thriller</p>
+                <p>Basada en los eventos reales que rodearon el desastre nuclear de Chernobyl en 1986, esta serie dramatiza los esfuerzos para contener la catástrofe y las consecuencias del peor accidente nuclear de la historia.</p>
+                <button onclick="playTrailer()">Reproducir Tráiler</button>
+                
+                <!-- Contenedor del tráiler -->
+                <div id="trailer-container" style="display: none;">
+                    <iframe id="trailer-video" width="560" height="315" src="https://www.youtube.com/embed/3xD4GqgN1p0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+
+                <p>Disponible en:</p>
+                <ul class="streaming-platforms">
+                    <li><a href="https://www.hbo.com/" target="_blank"><img src="IMG/hbo.jpg" alt="HBO"> Ver en HBO</a></li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="cast">
+            <h2>Reparto</h2>
+            <div class="cast-list">
+                <div class="actor">
+                    <img src="IMG/JARED H.jpg" alt="Reparto">
+                    <p>Jared Harris<br><span>Valery Legasov</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/STELLAN.jpg" alt="Stellan Skarsgård como Boris Shcherbina">
+                    <p>Stellan Skarsgård<br><span>Boris Shcherbina</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/EMILY.jpg" alt="Emily Watson como Ulana Khomyuk">
+                    <p>Emily Watson<br><span>Ulana Khomyuk</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/PAUL.jpg" alt="Paul Ritter como Anatoly Dyatlov">
+                    <p>Paul Ritter<br><span>Anatoly Dyatlov</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/JERENY.jpg" alt="Jeremy Irons como Gorbachev">
+                    <p>Jeremy Irons<br><span>Mijaíl Gorbachov</span></p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="comments-section">
+            <h2>Deja un comentario</h2>
+            <form id="comment-form">
+                <textarea id="comment-input" placeholder="Escribe tu comentario aquí..." rows="4" cols="50"></textarea><br><br>
+                <button type="button" onclick="submitComment()">Comentar</button>
+            </form>
+            <h3>Comentarios:</h3>
+            <div id="comments-list"></div>
+        </section>
+        
+        <section class="related-content">
+            <h2>La gente también ha visto</h2>
+            <div class="related-list">
+                <div class="show-thumb">Chernobyl 1986</div>
+                <div class="show-thumb">The Handmaid's Tale</div>
+                <div class="show-thumb">The Terror</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

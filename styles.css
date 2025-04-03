@@ -6,122 +6,15 @@
 }
 
 body {
-    background-color: white;
-}
-
-/* Estilos de navegación */
-nav ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
-    padding: 15px;
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-/* Barra de búsqueda */
-.search-bar {
-    display: flex;
-    flex-grow: 1;
-    align-items: center;
-}
-
-.search-bar input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.search-bar button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-    margin-left: -30px;
-}
-
-/* Autenticación */
-.auth {
-    margin-left: auto;
-}
-
-/* Separadores */
-hr {
-    border: 1px solid #eee;
-    margin-bottom: 20px;
-}
-
-/* Categorías y cuadrículas */
-.category {
-    margin-bottom: 30px;
-    padding: 0 20px;
-}
-
-.category h2 {
-    margin-bottom: 15px;
+    background-color: #E0F7FA;
+    color: #333;
     font-size: 18px;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 15px;
-}
-
-.grid img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    transition: transform 0.3s;
-}
-
-.grid img:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-}
-nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    padding: 0;
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li.search-bar {
-    display: flex;
-    align-items: center;
-}
-
-nav ul li.search-bar input {
-    margin-right: 5px;
-}
-
-nav ul li.auth {
-    margin-left: auto; /* Empuja los elementos de autenticación a la derecha */
-}
-body {
-    font-family: Arial, sans-serif;
-    background-color: #0A192F; /* Azul oscuro */
-    color: white;
-    margin: 0;
-    padding: 0;
-}
-
 header {
-    background-color: #112D4E;
-    padding: 10px 0;
+    background-color: #0288D1;
+    padding: 15px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -129,75 +22,357 @@ nav ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
+/* Estilo de navegación (Barra de navegación) */
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 8px 15px;
+    font-size: 20px;
+    padding: 10px 18px;
     transition: 0.3s;
+    border-radius: 5px;
 }
 
 nav a:hover {
-    background-color: #1B3A5B;
-    border-radius: 5px;
+    background-color: #01579B;
 }
 
+/* Estilo para la barra de búsqueda */
 .search-bar input {
-    padding: 8px;
+    padding: 10px;
     border-radius: 5px;
-    border: none;
+    border: 1px solid #0288D1;
+    background-color: white;
+    color: #0A192F;
+    font-size: 18px;
 }
 
 .search-bar button {
-    padding: 8px;
+    padding: 10px;
     border: none;
-    background-color: #3A7CA5;
+    background-color: #03A9F4;
     color: white;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 18px;
 }
 
 .search-bar button:hover {
-    background-color: #1B3A5B;
+    background-color: #01579B;
 }
 
-.category {
+/* Estilo para el contenedor de la serie (póster y detalles) */
+.show {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.show img {
+    width: 300px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.show-info {
+    max-width: 600px;
+}
+
+.show-info h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.show-info p {
+    margin-bottom: 15px;
+}
+
+/* Estilo para las secciones de episodios y reparto */
+.episodes, .cast {
     margin: 20px;
     padding: 20px;
-    background-color: #112D4E;
+    background-color: white;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    color: #0A192F;
 }
 
-.category h2 {
-    border-bottom: 2px solid #3A7CA5;
+.episodes h2, .cast h2 {
+    border-bottom: 3px solid #0288D1;
     padding-bottom: 5px;
+    color: #01579B;
+    font-size: 22px;
 }
 
-.grid {
+/* Listas de episodios y reparto con desplazamiento horizontal */
+.episodes-list, .cast-list {
     display: flex;
     gap: 15px;
     overflow-x: auto;
     padding: 10px 0;
 }
 
-.grid img {
-    width: 200px;
-    height: auto;
+.episode-thumb, .actor-thumb {
+    background: #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 150px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.episode-thumb img, .actor-thumb img {
+    width: 150px;
     border-radius: 10px;
-    transition: transform 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.grid img:hover {
+.episode-thumb:hover img, .actor-thumb:hover img {
     transform: scale(1.1);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Estilo del pie de página */
+footer {
+    background-color: #0288D1;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+/* Estilo de las plataformas de streaming */
+.streaming-platforms {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.streaming-platforms img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.streaming-platforms a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+/* Estilo de los actores en la sección de reparto */
+.actor img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para el header y la barra de navegación */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilo para el botón "Reproducir Tráiler" */
+button {
+    background-color: #ff4081; /* Color de fondo rosa */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 15px 30px; /* Relleno alrededor del texto */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Puntero de mano al pasar sobre el botón */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animación de fondo y tamaño */
+}
+
+button:hover {
+    background-color: #f50057; /* Cambio de color al pasar el mouse */
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño del botón */
+}
+
+button:focus {
+    outline: none; /* Eliminar el contorno al hacer clic */
+}
+#trailer-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#play-trailer-btn {
+    padding: 10px 20px;
+    background-color: #03A9F4;
+    color: white;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#play-trailer-btn:hover {
+    background-color: #0288D1;
+}
+.comments-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comments-section h2 {
+    font-size: 24px;
+    color: #01579B;
+}
+
+.comments-section textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #0288D1;
+    resize: none;
+}
+
+.comments-section button {
+    padding: 10px 20px;
+    background-color: #03A9F4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.comments-section button:hover {
+    background-color: #0288D1;
+}
+
+#comments-list .comment {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#comments-list .comment p {
+    margin: 0;
+    font-size: 16px;
+}
+.related-list {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.show-thumb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #222;
+    padding: 10px;
+    border-radius: 10px;
+    width: 150px;
+}
+
+.show-thumb img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.show-thumb p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #fff;
+}
+/* Estilos para la sección de contacto */
+/* Estilos para la sección de contacto */
+.contacto {
+    background-color: #333; /* Fondo gris oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Sombra sutil para dar profundidad */
+}
+
+.contacto h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contacto p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contacto ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contacto ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contacto ul li img {
+    width: 40px; /* Tamaño de la imagen */
+    height: 40px; /* Tamaño de la imagen */
+    border-radius: 50%; /* Imagen circular */
+    margin-right: 15px; /* Espacio entre la imagen y el texto */
+}
+
+.contacto ul li a {
+    color: #fff; /* Los enlaces también serán blancos */
+    text-decoration: none;
+}
+
+.contacto ul li a:hover {
+    text-decoration: underline;
+}
 

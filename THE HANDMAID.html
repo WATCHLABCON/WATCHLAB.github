@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Handmaid's Tale</title>
+    <link rel
+="stylesheet" href="styles.css">
+    <script src="scriptTHT.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Series ▼</a></li>
+                <li><a href="#">Películas ▼</a></li>
+                <li><a href="#">Géneros ▼</a></li>
+                <li class="search-bar">
+                    <input type="text" placeholder="Buscar títulos">
+                    <button>🔍</button>
+                </li>
+                <li class="auth">
+                    <a href="#">Iniciar Sesión</a> | <a href="#">Registrarse</a>
+                </li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    
+    <main>
+        <section class="show">
+            <img src="IMG/handmaid.jpg" alt="Póster de The Handmaid's Tale">
+            <div class="show-info">
+                <h1>The Handmaid's Tale</h1>
+                <p>⭐⭐⭐⭐⭐ Drama, Ciencia Ficción, Distopía</p>
+                <p>En un futuro cercano, en la república totalitaria de Gilead, las mujeres son subyugadas y utilizadas como criadoras en un régimen opresivo. Offred, una sirvienta, lucha por recuperar su libertad y reunirse con su hija.</p>
+                <button onclick="playTrailer()">Reproducir Tráiler</button>
+                
+                <!-- Contenedor del tráiler -->
+                <div id="trailer-container" style="display: none;">
+                    <iframe id="trailer-video" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+
+                <p>Disponible en:</p>
+                <ul class="streaming-platforms">
+                    <li><a href="https://www.hulu.com/" target="_blank"><img src="IMG/hulu.jpg" alt="Hulu"> Ver en Hulu</a></li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="cast">
+            <h2>Reparto</h2>
+            <div class="cast-list">
+                <div class="actor">
+                    <img src="IMG/ELIZABETH.jpg" alt="Elizabeth Moss como June Osborne">
+                    <p>Elizabeth Moss<br><span>June Osborne</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/YVONNE.jpg" alt="Yvonne Strahovski como Serena Joy">
+                    <p>Yvonne Strahovski<br><span>Serena Joy</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/JOSEPH.jpg" alt="Joseph Fiennes como Fred Waterford">
+                    <p>Joseph Fiennes<br><span>Fred Waterford</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/ALEXIS.jpg" alt="Alexis Bledel como Emily Malek">
+                    <p>Alexis Bledel<br><span>Emily Malek</span></p>
+                </div>
+                <div class="actor">
+                    <img src="IMG/BRADLEY.jpg" alt="Bradley Whitford como Joseph Lawrence">
+                    <p>Bradley Whitford<br><span>Joseph Lawrence</span></p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="comments-section">
+            <h2>Deja un comentario</h2>
+            <form id="comment-form">
+                <textarea id="comment-input" placeholder="Escribe tu comentario aquí..." rows="4" cols="50"></textarea><br><br>
+                <button type="button" onclick="submitComment()">Comentar</button>
+            </form>
+            <h3>Comentarios:</h3>
+            <div id="comments-list"></div>
+        </section>
+        
+        <section class="related">
+            <h2>La gente también ha visto</h2>
+            <div class="related-list">
+                <div class="show-thumb">
+                    <img src="IMG/westworld.jpg" alt="Westworld">
+                    <p>Westworld</p>
+                </div>
+                <div class="show-thumb">
+                    <img src="IMG/black_mirror.jpg" alt="Black Mirror">
+                    <p>Black Mirror</p>
+                </div>
+                <div class="show-thumb">
+                    <img src="IMG/snowpiercer.jpg" alt="Snowpiercer">
+                    <p>Snowpiercer</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="contacto">
+            <h2>Contacto</h2>
+            <p>Si tienes preguntas o comentarios, no dudes en ponerte en contacto con nosotros:</p>
+            <ul>
+                <li>
+                    <img src="IMG/jenni.jpg" alt="Jenni Dariana Serna López" class="contact-img">
+                    Jenni Dariana Serna López - <a href="https://wa.me/524452152533">+52 445 215 2533</a>
+                </li>
+                <li>
+                    <img src="IMG/juan.jpg" alt="Juan Jesús Méndez Medina" class="contact-img">
+                    Juan Jesús Méndez Medina - <a href="https://wa.me/524451558239">+52 445 155 8239</a>
+                </li>
+                <li>
+                    <img src="IMG/maricarmen.jpeg" alt="Maricarmen García Zavala" class="contact-img">
+                    Maricarmen García Zavala - <a href="https://wa.me/524451397933">+52 445 139 7933</a>
+                </li>
+                <li>
+                    <img src="IMG/luis.jpg" alt="Luis González Lemus" class="contact-img">
+                    Luis González Lemus - <a href="https://wa.me/524451593546">+52 445 159 3546</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
