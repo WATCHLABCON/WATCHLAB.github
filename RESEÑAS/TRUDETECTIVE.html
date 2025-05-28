@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dune</title>
+    <title>True Detective</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scriptDUNE.js" defer></script>
+    <script src="scriptTRUDETECTIVE.js" defer></script>
 </head>
 <body>
     <header>
@@ -25,57 +25,76 @@
         </nav>
         <hr>
     </header>
-    
+
     <main>
         <section class="show">
-            <img src="IMG/dune.jpg" alt="Póster de Dune">
+            <img src="IMG/truedetective.jpg" alt="Póster de True Detective">
             <div class="show-info">
-                <h1>Dune</h1>
-                <p>⭐⭐⭐⭐⭐ Ciencia Ficción, Aventura</p>
-                <p><em>Dune</em> sigue la historia de Paul Atreides, un joven noble que debe enfrentarse a desafíos políticos, familiares y espirituales en el desértico planeta Arrakis, la fuente más importante de una sustancia llamada "especia", que es crucial para el universo.</p>
+                <h1>True Detective</h1>
+                <p>⭐⭐⭐⭐⭐ Crimen, Drama, Misterio, Thriller</p>
+                <p><em>True Detective</em> es una serie antológica de crimen en la que cada temporada cuenta una historia diferente con personajes nuevos. La serie es conocida por su narrativa profunda, atmósfera oscura y actuaciones estelares.</p>
                 <button onclick="playTrailer()">Reproducir Tráiler</button>
-                
+
                 <div id="trailer-container" style="display: none;">
                     <iframe id="trailer-video" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
 
                 <p>Disponible en:</p>
                 <ul class="streaming-platforms">
-                    <li><a href="https://www.hbo.com/dune" target="_blank"><img src="IMG/hbo.jpg" alt="HBO"> Ver en HBO</a></li>
+                    <li><a href="https://www.hbomax.com/" target="_blank"><img src="IMG/hbo.jpg" alt="HBO Max"> Ver en HBO Max</a></li>
                 </ul>
             </div>
         </section>
-        
+
         <section class="cast">
-            <h2>Reparto</h2>
+            <h2>Reparto Destacado</h2>
             <div class="cast-list">
                 <div class="actor">
-                    <img src="IMG/timothee.jpg" alt="Timothée Chalamet como Paul Atreides">
-                    <p>Timothée Chalamet<br><span>Paul Atreides</span></p>
+                    <img src="IMG/matthew_mcconaughey.jpg" alt="Matthew McConaughey como Rust Cohle">
+                    <p>Matthew McConaughey<br><span>Rust Cohle (T1)</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/rebecca.jpg" alt="Rebecca Ferguson como Lady Jessica">
-                    <p>Rebecca Ferguson<br><span>Lady Jessica</span></p>
+                    <img src="IMG/woody_harrelson.jpg" alt="Woody Harrelson como Marty Hart">
+                    <p>Woody Harrelson<br><span>Marty Hart (T1)</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/oscar.jpg" alt="Oscar Isaac como Duke Leto Atreides">
-                    <p>Oscar Isaac<br><span>Duke Leto Atreides</span></p>
+                    <img src="IMG/colin_farrell.jpg" alt="Colin Farrell como Ray Velcoro">
+                    <p>Colin Farrell<br><span>Ray Velcoro (T2)</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/josh.jpg" alt="Josh Brolin como Gurney Halleck">
-                    <p>Josh Brolin<br><span>Gurney Halleck</span></p>
+                    <img src="IMG/rachel_mcadams.jpg" alt="Rachel McAdams como Ani Bezzerides">
+                    <p>Rachel McAdams<br><span>Ani Bezzerides (T2)</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/stellan2.jpg" alt="Stellan Skarsgård como Baron Harkonnen">
-                    <p>Stellan Skarsgård<br><span>Baron Harkonnen</span></p>
+                    <img src="IMG/mahershala_ali.jpg" alt="Mahershala Ali como Wayne Hays">
+                    <p>Mahershala Ali<br><span>Wayne Hays (T3)</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/charlotte.jpg" alt="Charlotte Rampling como Reverend Mother Mohiam">
-                    <p>Charlotte Rampling<br><span>Reverend Mother Mohiam</span></p>
+                    <img src="IMG/jodie_foster.jpg" alt="Jodie Foster como Liz Danvers">
+                    <p>Jodie Foster<br><span>Liz Danvers (T4)</span></p>
                 </div>
             </div>
         </section>
-        
+
+        <section class="seasons">
+            <h2>Temporadas</h2>
+            <ul>
+                <li><strong>Temporada 1 (2014):</strong> Rust Cohle y Marty Hart investigan un asesinato ritualista en Luisiana. Aclamada por su narrativa y atmósfera filosófica.</li>
+                <li><strong>Temporada 2 (2015):</strong> Tres policías y un criminal se enfrentan a una red de corrupción en California. Estilo noir más político.</li>
+                <li><strong>Temporada 3 (2019):</strong> Un caso de niños desaparecidos en Arkansas con saltos temporales a lo largo de tres décadas.</li>
+                <li><strong>Temporada 4 - Night Country (2024):</strong> En Alaska, un grupo de investigadores busca a trabajadores desaparecidos en condiciones extremas.</li>
+            </ul>
+        </section>
+
+        <section class="awards">
+            <h2>Premios y Reconocimientos</h2>
+            <ul>
+                <li>5 Premios Emmy</li>
+                <li>Premios BAFTA y Globos de Oro</li>
+                <li>Reconocida por su guion, dirección y fotografía</li>
+            </ul>
+        </section>
+
         <section class="comments-section">
             <h2>Deja un comentario</h2>
             <form id="comment-form">
@@ -89,18 +108,12 @@
         <section class="related-content">
             <h2>La gente también ha visto</h2>
             <div class="related-list">
-                <div class="show-thumb"><img src="IMG/blade_runner.jpg" alt="Blade Runner 2049">
-                    <p>Blade Runner 2049</p>
-                </div>
-                <div class="show-thumb"><img src="IMG/interstellar.jpg" alt="Interstellar">
-                    <p>Interstellar</p>
-                </div>
-                <div class="show-thumb"><img src="IMG/mars.jpg" alt="The Martian">
-                    <p>The Martian</p>
-                </div>
+                <div class="show-thumb"><img src="IMG/fargo.jpg" alt="Fargo"><p>Fargo</p></div>
+                <div class="show-thumb"><img src="IMG/breaking_bad.jpg" alt="Breaking Bad"><p>Breaking Bad</p></div>
+                <div class="show-thumb"><img src="IMG/the_night_of.jpg" alt="The Night Of"><p>The Night Of</p></div>
             </div>
         </section>
-        
+
         <section class="contacto">
             <h2>Contacto</h2>
             <p>Si tienes preguntas o comentarios, no dudes en ponerte en contacto con nosotros:</p>
@@ -126,3 +139,4 @@
     </main>
 </body>
 </html>
+

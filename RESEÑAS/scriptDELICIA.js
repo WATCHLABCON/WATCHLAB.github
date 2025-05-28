@@ -3,8 +3,8 @@ function playTrailer() {
     let trailerContainer = document.getElementById("trailer-container");
     let trailerVideo = document.getElementById("trailer-video");
 
-    // URL del tráiler en formato embed para iframe
-    let trailerURL = "https://www.youtube.com/embed/iOyQx7MXaz0?autoplay=1";
+    // URL del tráiler en formato embebido
+    let trailerURL = "https://www.youtube.com/embed/EjJ2Z6lpjmI?si=RraTECmOspRrg-8Jt";
 
     trailerVideo.src = trailerURL;
     trailerContainer.style.display = "block";
@@ -12,10 +12,39 @@ function playTrailer() {
 
 // Función para buscar títulos
 function searchTitles() {
-    let query = document.getElementById("searchInput").value;
-    alert("Buscando: " + query);
-    // Aquí puedes añadir más lógica para realizar la búsqueda de títulos
+    let query = document.getElementById("searchInput").value.trim();
+    if (query !== "") {
+        console.log("Buscando: " + query);
+        // Aquí puedes añadir más lógica para realizar la búsqueda de títulos
+    } else {
+        alert("Por favor ingresa un título para buscar.");
+    }
 }
+
+
+// Función para buscar títulos
+function searchTitles() {
+    let query = document.getElementById("searchInput").value.trim();
+    if (query !== "") {
+        console.log("Buscando: " + query);
+        // Aquí puedes añadir más lógica para realizar la búsqueda de títulos
+    } else {
+        alert("Por favor ingresa un título para buscar.");
+    }
+}
+
+
+// Función para buscar títulos
+function searchTitles() {
+    let query = document.getElementById("searchInput").value.trim();
+    if (query !== "") {
+        console.log("Buscando: " + query);
+        // Aquí puedes añadir más lógica para realizar la búsqueda de títulos
+    } else {
+        alert("Por favor ingresa un título para buscar.");
+    }
+}
+
 
 // Función para enviar y mostrar el comentario
 function submitComment() {
