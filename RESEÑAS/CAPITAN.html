@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Last of Us</title>
+    <title>Capitán América: Un Nuevo Mundo</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scriptTLOU.js" defer></script>
+    <script src="scriptCAPITANAMERICA.js" defer></script>
 </head>
 <body>
     <header>
@@ -13,6 +13,7 @@
             <ul>
                 <li><a href="#">Series ▼</a></li>
                 <li><a href="#">Películas ▼</a></li>
+                <li><a href="#">Géneros ▼</a></li>
                 <li class="search-bar">
                     <input type="text" placeholder="Buscar títulos">
                     <button>🔍</button>
@@ -24,54 +25,54 @@
         </nav>
         <hr>
     </header>
-    
+
     <main>
         <section class="show">
-            <img src="IMG/the last of us.jpg" alt="Póster de The Last of Us">
+            <img src="IMG/capitanamerica_nuevo.jpg" alt="Póster de Capitán América: Un Nuevo Mundo">
             <div class="show-info">
-                <h1>The Last of Us</h1>
-                <p>⭐⭐⭐⭐⭐ Drama, Ciencia Ficción, Aventura</p>
-                <p>En un mundo postapocalíptico, Joel y Ellie deben atravesar los Estados Unidos devastados por una pandemia fúngica, enfrentándose a infectados y sobrevivientes hostiles en una emotiva historia de supervivencia y esperanza.</p>
+                <h1>Capitán América: Un Nuevo Mundo</h1>
+                <p>⭐⭐⭐⭐⭐ Acción, Superhéroes</p>
+                <p><em>Capitán América: Un Nuevo Mundo</em> (2025) continúa la saga del Capitán América tras los eventos de la última gran guerra contra Thanos. Steve Rogers regresa para enfrentar nuevas amenazas que ponen en peligro la paz mundial, mientras lidera un equipo diverso de héroes para proteger a la humanidad de una conspiración global. ¿Podrá el Capitán América enfrentar estos desafíos y garantizar la seguridad de todos?</p>
                 <button onclick="playTrailer()">Reproducir Tráiler</button>
-                
-                <!-- Contenedor del tráiler -->
+
                 <div id="trailer-container" style="display: none;">
-                    <iframe id="trailer-video" width="560" height="315" src="https://www.youtube.com/embed/uLtkt8BonwM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <iframe id="trailer-video" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
 
                 <p>Disponible en:</p>
                 <ul class="streaming-platforms">
-                    <li><a href="https://www.max.com/" target="_blank"><img src="IMG/hbo.jpg" alt="HBO Max"> Ver en HBO Max</a></li>
+                    <li><a href="https://www.disneyplus.com/" target="_blank"><img src="IMG/disneyplus.jpg" alt="Disney+"> Ver en Disney+</a></li>
+                    <li><a href="https://www.amazon.com/" target="_blank"><img src="IMG/amazon.jpg" alt="Amazon"> Ver en Amazon Prime</a></li>
                 </ul>
             </div>
         </section>
-        
+
         <section class="cast">
             <h2>Reparto</h2>
             <div class="cast-list">
                 <div class="actor">
-                    <img src="IMG/PEDRO.jpg" alt="Pedro Pascal como Joel">
-                    <p>Pedro Pascal<br><span>Joel</span></p>
+                    <img src="IMG/chris_evans.jpg" alt="Chris Evans como Capitán América">
+                    <p>Chris Evans<br><span>Capitán América</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/BELLA.jpg" alt="Bella Ramsey como Ellie">
-                    <p>Bella Ramsey<br><span>Ellie</span></p>
+                    <img src="IMG/sam_wilson.jpg" alt="Anthony Mackie como Sam Wilson">
+                    <p>Anthony Mackie<br><span>Sam Wilson / El Halcón</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/GABIEL.jpg" alt="Gabriel Luna como Tommy">
-                    <p>Gabriel Luna<br><span>Tommy</span></p>
+                    <img src="IMG/sharon_carter.jpg" alt="Emily VanCamp como Sharon Carter">
+                    <p>Emily VanCamp<br><span>Sharon Carter</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/ANNA.jpg" alt="Anna Torv como Tess">
-                    <p>Anna Torv<br><span>Tess</span></p>
+                    <img src="IMG/john_walkert.jpg" alt="Wyatt Russell como John Walker">
+                    <p>Wyatt Russell<br><span>John Walker / U.S. Agent</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/NICO.jpg" alt="Nico Parker como Sarah">
-                    <p>Nico Parker<br><span>Sarah</span></p>
+                    <img src="IMG/anthony_daniels.jpg" alt="Anthony Daniels como Zemo">
+                    <p>Anthony Daniels<br><span>Zemo</span></p>
                 </div>
             </div>
         </section>
-        
+
         <section class="comments-section">
             <h2>Deja un comentario</h2>
             <form id="comment-form">
@@ -81,22 +82,16 @@
             <h3>Comentarios:</h3>
             <div id="comments-list"></div>
         </section>
-        
-       <section class="related-content">
-            <h2>Películas Relacionadas</h2>
+
+        <section class="related-content">
+            <h2>La gente también ha visto</h2>
             <div class="related-list">
-                <div class="show-thumb"> <img src="IMG/walking.jpg" alt="The Walking Dead">
-                    <p>The Walking Dead</p>
-                </div>
-                <div class="show-thumb"><img src="IMG/guerramundialz.jpg" alt="Guerra Mundial Z">
-                    <p>Guerra Mundial Z</p>
-                </div>
-                <div class="show-thumb"><img src="IMG/nacionz.jpg" alt="Nacion Z">
-                    <p>Nacion Z</p>
-                </div>
+                <div class="show-thumb"><img src="IMG/avengers_endgame.jpg" alt="Avengers: Endgame"><p>Avengers: Endgame</p></div>
+                <div class="show-thumb"><img src="IMG/falcon_winter.jpg" alt="The Falcon and The Winter Soldier"><p>The Falcon and The Winter Soldier</p></div>
+                <div class="show-thumb"><img src="IMG/blackwidow+.jpg" alt="Black Widow"><p>Black Widow</p></div>
             </div>
         </section>
-        
+
         <section class="contacto">
             <h2>Contacto</h2>
             <p>Si tienes preguntas o comentarios, no dudes en ponerte en contacto con nosotros:</p>

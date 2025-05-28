@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Last of Us</title>
+    <title>Gladiator</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scriptTLOU.js" defer></script>
+    <script src="scriptGLADIATOR.js" defer></script>
 </head>
 <body>
     <header>
@@ -13,6 +13,7 @@
             <ul>
                 <li><a href="#">Series ▼</a></li>
                 <li><a href="#">Películas ▼</a></li>
+                <li><a href="#">Géneros ▼</a></li>
                 <li class="search-bar">
                     <input type="text" placeholder="Buscar títulos">
                     <button>🔍</button>
@@ -24,54 +25,54 @@
         </nav>
         <hr>
     </header>
-    
+
     <main>
         <section class="show">
-            <img src="IMG/the last of us.jpg" alt="Póster de The Last of Us">
+            <img src="IMG/gladiator.jpg" alt="Póster de Gladiator">
             <div class="show-info">
-                <h1>The Last of Us</h1>
-                <p>⭐⭐⭐⭐⭐ Drama, Ciencia Ficción, Aventura</p>
-                <p>En un mundo postapocalíptico, Joel y Ellie deben atravesar los Estados Unidos devastados por una pandemia fúngica, enfrentándose a infectados y sobrevivientes hostiles en una emotiva historia de supervivencia y esperanza.</p>
+                <h1>Gladiator</h1>
+                <p>⭐⭐⭐⭐⭐ Acción, Drama, Historia</p>
+                <p><em>Gladiator</em> (2000), dirigida por Ridley Scott, cuenta la historia del general romano Máximo Décimo Meridio (Russell Crowe), quien es traicionado, convertido en esclavo y obligado a luchar como gladiador, buscando venganza contra el corrupto emperador Cómodo (Joaquin Phoenix) que asesinó a su familia.</p>
                 <button onclick="playTrailer()">Reproducir Tráiler</button>
-                
-                <!-- Contenedor del tráiler -->
+
                 <div id="trailer-container" style="display: none;">
-                    <iframe id="trailer-video" width="560" height="315" src="https://www.youtube.com/embed/uLtkt8BonwM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <iframe id="trailer-video" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
 
                 <p>Disponible en:</p>
                 <ul class="streaming-platforms">
-                    <li><a href="https://www.max.com/" target="_blank"><img src="IMG/hbo.jpg" alt="HBO Max"> Ver en HBO Max</a></li>
+                    <li><a href="https://www.netflix.com/" target="_blank"><img src="IMG/netflix.jpg" alt="Netflix"> Ver en Netflix</a></li>
+                    <li><a href="https://www.amazon.com/" target="_blank"><img src="IMG/amazon.jpg" alt="Amazon"> Ver en Amazon Prime</a></li>
                 </ul>
             </div>
         </section>
-        
+
         <section class="cast">
             <h2>Reparto</h2>
             <div class="cast-list">
                 <div class="actor">
-                    <img src="IMG/PEDRO.jpg" alt="Pedro Pascal como Joel">
-                    <p>Pedro Pascal<br><span>Joel</span></p>
+                    <img src="IMG/russell_crowe.jpg" alt="Russell Crowe como Máximo">
+                    <p>Russell Crowe<br><span>Máximo</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/BELLA.jpg" alt="Bella Ramsey como Ellie">
-                    <p>Bella Ramsey<br><span>Ellie</span></p>
+                    <img src="IMG/joaquin_phoenix.jpg" alt="Joaquin Phoenix como Cómodo">
+                    <p>Joaquin Phoenix<br><span>Cómodo</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/GABIEL.jpg" alt="Gabriel Luna como Tommy">
-                    <p>Gabriel Luna<br><span>Tommy</span></p>
+                    <img src="IMG/connie_nielsen.jpg" alt="Connie Nielsen como Lucilla">
+                    <p>Connie Nielsen<br><span>Lucilla</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/ANNA.jpg" alt="Anna Torv como Tess">
-                    <p>Anna Torv<br><span>Tess</span></p>
+                    <img src="IMG/oliver_reed.jpg" alt="Oliver Reed como Proximo">
+                    <p>Oliver Reed<br><span>Proximo</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/NICO.jpg" alt="Nico Parker como Sarah">
-                    <p>Nico Parker<br><span>Sarah</span></p>
+                    <img src="IMG/derek_jacobi.jpg" alt="Derek Jacobi como Gracchus">
+                    <p>Derek Jacobi<br><span>Gracchus</span></p>
                 </div>
             </div>
         </section>
-        
+
         <section class="comments-section">
             <h2>Deja un comentario</h2>
             <form id="comment-form">
@@ -81,22 +82,16 @@
             <h3>Comentarios:</h3>
             <div id="comments-list"></div>
         </section>
-        
-       <section class="related-content">
-            <h2>Películas Relacionadas</h2>
+
+        <section class="related-content">
+            <h2>La gente también ha visto</h2>
             <div class="related-list">
-                <div class="show-thumb"> <img src="IMG/walking.jpg" alt="The Walking Dead">
-                    <p>The Walking Dead</p>
-                </div>
-                <div class="show-thumb"><img src="IMG/guerramundialz.jpg" alt="Guerra Mundial Z">
-                    <p>Guerra Mundial Z</p>
-                </div>
-                <div class="show-thumb"><img src="IMG/nacionz.jpg" alt="Nacion Z">
-                    <p>Nacion Z</p>
-                </div>
+                <div class="show-thumb"><img src="IMG/braveheart.jpg" alt="Braveheart"><p>Braveheart</p></div>
+                <div class="show-thumb"><img src="IMG/troy.jpg" alt="Troy"><p>Troy</p></div>
+                <div class="show-thumb"><img src="IMG/300.jpg" alt="300"><p>300</p></div>
             </div>
         </section>
-        
+
         <section class="contacto">
             <h2>Contacto</h2>
             <p>Si tienes preguntas o comentarios, no dudes en ponerte en contacto con nosotros:</p>

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Last of Us</title>
+    <title>Scarface</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scriptTLOU.js" defer></script>
+    <script src="scriptSCARFACE.js" defer></script>
 </head>
 <body>
     <header>
@@ -13,6 +13,7 @@
             <ul>
                 <li><a href="#">Series ▼</a></li>
                 <li><a href="#">Películas ▼</a></li>
+                <li><a href="#">Géneros ▼</a></li>
                 <li class="search-bar">
                     <input type="text" placeholder="Buscar títulos">
                     <button>🔍</button>
@@ -24,54 +25,54 @@
         </nav>
         <hr>
     </header>
-    
+
     <main>
         <section class="show">
-            <img src="IMG/the last of us.jpg" alt="Póster de The Last of Us">
+            <img src="IMG/scarface.jpg" alt="Póster de Scarface">
             <div class="show-info">
-                <h1>The Last of Us</h1>
-                <p>⭐⭐⭐⭐⭐ Drama, Ciencia Ficción, Aventura</p>
-                <p>En un mundo postapocalíptico, Joel y Ellie deben atravesar los Estados Unidos devastados por una pandemia fúngica, enfrentándose a infectados y sobrevivientes hostiles en una emotiva historia de supervivencia y esperanza.</p>
+                <h1>Scarface</h1>
+                <p>⭐⭐⭐⭐⭐ Crimen, Drama</p>
+                <p><em>Scarface</em> cuenta la historia de Tony Montana (Al Pacino), un inmigrante cubano que llega a Miami durante el éxodo del Mariel en los años 80 y asciende violentamente en el mundo del narcotráfico, convirtiéndose en uno de los criminales más poderosos y temidos de la ciudad. La película explora temas como la ambición, el poder y la caída de un imperio criminal.</p>
                 <button onclick="playTrailer()">Reproducir Tráiler</button>
-                
-                <!-- Contenedor del tráiler -->
+
                 <div id="trailer-container" style="display: none;">
-                    <iframe id="trailer-video" width="560" height="315" src="https://www.youtube.com/embed/uLtkt8BonwM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <iframe id="trailer-video" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
 
                 <p>Disponible en:</p>
                 <ul class="streaming-platforms">
-                    <li><a href="https://www.max.com/" target="_blank"><img src="IMG/hbo.jpg" alt="HBO Max"> Ver en HBO Max</a></li>
+                    <li><a href="https://www.netflix.com/" target="_blank"><img src="IMG/netflix.jpg" alt="Netflix"> Ver en Netflix</a></li>
+                    <li><a href="https://www.amazon.com/" target="_blank"><img src="IMG/amazon.jpg" alt="Amazon"> Ver en Amazon Prime</a></li>
                 </ul>
             </div>
         </section>
-        
+
         <section class="cast">
             <h2>Reparto</h2>
             <div class="cast-list">
                 <div class="actor">
-                    <img src="IMG/PEDRO.jpg" alt="Pedro Pascal como Joel">
-                    <p>Pedro Pascal<br><span>Joel</span></p>
+                    <img src="IMG/al_pacino.jpg" alt="Al Pacino como Tony Montana">
+                    <p>Al Pacino<br><span>Tony Montana</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/BELLA.jpg" alt="Bella Ramsey como Ellie">
-                    <p>Bella Ramsey<br><span>Ellie</span></p>
+                    <img src="IMG/michelle_pfeiffer.jpg" alt="Michelle Pfeiffer como Elvira Hancock">
+                    <p>Michelle Pfeiffer<br><span>Elvira Hancock</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/GABIEL.jpg" alt="Gabriel Luna como Tommy">
-                    <p>Gabriel Luna<br><span>Tommy</span></p>
+                    <img src="IMG/steven_bauer.jpg" alt="Steven Bauer como Manny Ribera">
+                    <p>Steven Bauer<br><span>Manny Ribera</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/ANNA.jpg" alt="Anna Torv como Tess">
-                    <p>Anna Torv<br><span>Tess</span></p>
+                    <img src="IMG/robert_loggia.jpg" alt="Robert Loggia como Frank Lopez">
+                    <p>Robert Loggia<br><span>Frank Lopez</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/NICO.jpg" alt="Nico Parker como Sarah">
-                    <p>Nico Parker<br><span>Sarah</span></p>
+                    <img src="IMG/mary_elizabeth_mastrantonio.jpg" alt="Mary Elizabeth Mastrantonio como Gina Montana">
+                    <p>Mary Elizabeth Mastrantonio<br><span>Gina Montana</span></p>
                 </div>
             </div>
         </section>
-        
+
         <section class="comments-section">
             <h2>Deja un comentario</h2>
             <form id="comment-form">
@@ -81,22 +82,16 @@
             <h3>Comentarios:</h3>
             <div id="comments-list"></div>
         </section>
-        
-       <section class="related-content">
-            <h2>Películas Relacionadas</h2>
+
+        <section class="related-content">
+            <h2>La gente también ha visto</h2>
             <div class="related-list">
-                <div class="show-thumb"> <img src="IMG/walking.jpg" alt="The Walking Dead">
-                    <p>The Walking Dead</p>
-                </div>
-                <div class="show-thumb"><img src="IMG/guerramundialz.jpg" alt="Guerra Mundial Z">
-                    <p>Guerra Mundial Z</p>
-                </div>
-                <div class="show-thumb"><img src="IMG/nacionz.jpg" alt="Nacion Z">
-                    <p>Nacion Z</p>
-                </div>
+                <div class="show-thumb"><img src="IMG/godfather.jpg" alt="The Godfather"><p>The Godfather</p></div>
+                <div class="show-thumb"><img src="IMG/carlitosway.jpg" alt="Carlito's Way"><p>Carlito's Way</p></div>
+                <div class="show-thumb"><img src="IMG/goodfellas.jpg" alt="Goodfellas"><p>Goodfellas</p></div>
             </div>
         </section>
-        
+
         <section class="contacto">
             <h2>Contacto</h2>
             <p>Si tienes preguntas o comentarios, no dudes en ponerte en contacto con nosotros:</p>

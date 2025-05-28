@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Last of Us</title>
+    <title>Moana 2</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scriptTLOU.js" defer></script>
+    <script src="scriptMOANA2.js" defer></script>
 </head>
 <body>
     <header>
@@ -13,6 +13,7 @@
             <ul>
                 <li><a href="#">Series ▼</a></li>
                 <li><a href="#">Películas ▼</a></li>
+                <li><a href="#">Géneros ▼</a></li>
                 <li class="search-bar">
                     <input type="text" placeholder="Buscar títulos">
                     <button>🔍</button>
@@ -24,54 +25,50 @@
         </nav>
         <hr>
     </header>
-    
+
     <main>
         <section class="show">
-            <img src="IMG/the last of us.jpg" alt="Póster de The Last of Us">
+            <img src="IMG/moana.jpg" alt="Póster de Moana 2">
             <div class="show-info">
-                <h1>The Last of Us</h1>
-                <p>⭐⭐⭐⭐⭐ Drama, Ciencia Ficción, Aventura</p>
-                <p>En un mundo postapocalíptico, Joel y Ellie deben atravesar los Estados Unidos devastados por una pandemia fúngica, enfrentándose a infectados y sobrevivientes hostiles en una emotiva historia de supervivencia y esperanza.</p>
+                <h1>Moana 2</h1>
+                <p>⭐⭐⭐⭐⭐ Aventura, Animación, Familiar</p>
+                <p><em>Moana 2</em> es la esperada secuela que sigue las nuevas aventuras de Moana y Maui mientras enfrentan nuevos desafíos en el océano. Después de regresar a su isla, Moana descubre que un nuevo peligro acecha las islas del Pacífico y debe embarcarse en una nueva travesía para proteger a su pueblo.</p>
                 <button onclick="playTrailer()">Reproducir Tráiler</button>
-                
-                <!-- Contenedor del tráiler -->
+
                 <div id="trailer-container" style="display: none;">
-                    <iframe id="trailer-video" width="560" height="315" src="https://www.youtube.com/embed/uLtkt8BonwM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <iframe id="trailer-video" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
 
                 <p>Disponible en:</p>
                 <ul class="streaming-platforms">
-                    <li><a href="https://www.max.com/" target="_blank"><img src="IMG/hbo.jpg" alt="HBO Max"> Ver en HBO Max</a></li>
+                    <li><a href="https://www.disneyplus.com/" target="_blank"><img src="IMG/disneyplus.jpg" alt="Disney+"> Ver en Disney+</a></li>
+                    <li><a href="https://www.amazon.com/" target="_blank"><img src="IMG/amazon.jpg" alt="Amazon"> Ver en Amazon Prime</a></li>
                 </ul>
             </div>
         </section>
-        
+
         <section class="cast">
             <h2>Reparto</h2>
             <div class="cast-list">
                 <div class="actor">
-                    <img src="IMG/PEDRO.jpg" alt="Pedro Pascal como Joel">
-                    <p>Pedro Pascal<br><span>Joel</span></p>
+                    <img src="IMG/auli_cravalho.jpg" alt="Auli'i Cravalho como Moana">
+                    <p>Auli'i Cravalho<br><span>Moana</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/BELLA.jpg" alt="Bella Ramsey como Ellie">
-                    <p>Bella Ramsey<br><span>Ellie</span></p>
+                    <img src="IMG/dwayne_johnson.jpg" alt="Dwayne Johnson como Maui">
+                    <p>Dwayne Johnson<br><span>Maui</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/GABIEL.jpg" alt="Gabriel Luna como Tommy">
-                    <p>Gabriel Luna<br><span>Tommy</span></p>
+                    <img src="IMG/temuera_morrison.jpg" alt="Temuera Morrison como Sina">
+                    <p>Temuera Morrison<br><span>Sina</span></p>
                 </div>
                 <div class="actor">
-                    <img src="IMG/ANNA.jpg" alt="Anna Torv como Tess">
-                    <p>Anna Torv<br><span>Tess</span></p>
-                </div>
-                <div class="actor">
-                    <img src="IMG/NICO.jpg" alt="Nico Parker como Sarah">
-                    <p>Nico Parker<br><span>Sarah</span></p>
+                    <img src="IMG/rachel_house.jpg" alt="Rachel House como Tala">
+                    <p>Rachel House<br><span>Tala</span></p>
                 </div>
             </div>
         </section>
-        
+
         <section class="comments-section">
             <h2>Deja un comentario</h2>
             <form id="comment-form">
@@ -81,22 +78,16 @@
             <h3>Comentarios:</h3>
             <div id="comments-list"></div>
         </section>
-        
-       <section class="related-content">
-            <h2>Películas Relacionadas</h2>
+
+        <section class="related-content">
+            <h2>La gente también ha visto</h2>
             <div class="related-list">
-                <div class="show-thumb"> <img src="IMG/walking.jpg" alt="The Walking Dead">
-                    <p>The Walking Dead</p>
-                </div>
-                <div class="show-thumb"><img src="IMG/guerramundialz.jpg" alt="Guerra Mundial Z">
-                    <p>Guerra Mundial Z</p>
-                </div>
-                <div class="show-thumb"><img src="IMG/nacionz.jpg" alt="Nacion Z">
-                    <p>Nacion Z</p>
-                </div>
+                <div class="show-thumb"><img src="IMG/moana.jpg" alt="moanaa"><p>Moana</p></div>
+                <div class="show-thumb"><img src="IMG/Frozen.jpg" alt="Frozen"><p>Frozen</p></div>
+                <div class="show-thumb"><img src="IMG/zootopia.jpg" alt="Zootopia"><p>Zootopia</p></div>
             </div>
         </section>
-        
+
         <section class="contacto">
             <h2>Contacto</h2>
             <p>Si tienes preguntas o comentarios, no dudes en ponerte en contacto con nosotros:</p>
