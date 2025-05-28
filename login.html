@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Iniciar Sesión - WATCHLAB</title>
+</head>
+<body>
+    <h2>Inicia sesión</h2>
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="Usuario" required />
+        <input type="password" id="password" placeholder="Contraseña" required />
+        <button type="submit">Entrar</button>
+    </form>
+    <p id="errorMessage" style="color:red;"></p>
+    <p>¿No tienes cuenta? <a href="registrarse.html">Regístrate aquí</a></p>
+
+    <script>
+        const form = document.getElementById('loginForm');
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            fetch('login.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: `username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`
+            })
+            .then(res => res.text())
+            .then(data => {
+                if (data.trim() === 'success') {
+                    localStorage.setItem('usuario', username);
+                    window.location.href = 'index.html';
+                } else {
+                    document.getElementById('errorMessage').textContent = data;
+                }
+            })
+            .catch(() => {
+                document.getElementById('errorMessage').textContent = 'Error de conexión con el servidor.';
+            });
+        });
+    </script>
+</body>
+</html>

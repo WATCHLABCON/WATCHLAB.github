@@ -87,3 +87,65 @@ nav a:hover {
 .grid img:hover {
     transform: scale(1.1);
 }
+.contacto {
+    background-color: #062153; /* Fondo gris oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Sombra sutil para dar profundidad */
+}
+
+.contacto h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contacto p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contacto ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contacto ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contacto ul li img {
+    width: 40px; /* Tamaño de la imagen */
+    height: 40px; /* Tamaño de la imagen */
+    border-radius: 50%; /* Imagen circular */
+    margin-right: 15px; /* Espacio entre la imagen y el texto */
+}
+
+.contacto ul li a {
+    color: #fff; /* Los enlaces también serán blancos */
+    text-decoration: none;
+}
+
+.contacto ul li a:hover {
+    text-decoration: underline;
+}
+.auth {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.auth a, .auth span {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,117 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales para el fondo */
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* Contenedor del fondo animado */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('IMG/fondo.jpeg'); /* Ruta de la imagen */
+    background-size: cover;
+    background-position: center;
+    animation: backgroundAnimation 20s infinite linear; /* Animación de fondo */
+    z-index: -1; /* Esto asegura que el fondo esté detrás del contenido */
+}
+
+/* Animación de desplazamiento de fondo */
+@keyframes backgroundAnimation {
+    0% {
+        background-position: center;
+    }
+    50% {
+        background-position: top left;
+    }
+    100% {
+        background-position: center;
+    }
+}
+
+/* Estilos generales para los formularios de inicio de sesión */
+.container {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté encima del fondo */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 183, 255, 0.2);
+    width: 320px;
+    text-align: center;
+}
+
+.container h2 {
+    margin-bottom: 1rem;
+    color: #00b7ff;
+}
+
+.container input {
+    width: 100%;
+    padding: 0.6rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.container button {
+    width: 100%;
+    padding: 0.7rem;
+    background-color: #00b7ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.container button:hover {
+    background-color: #008fc7;
+}
+
+/* Mensajes de error y bienvenida */
+.error {
+    color: #ff4d4d;
+    margin-top: 10px;
+}
+
+.welcome {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Estilos para la vista de Login y Registro */
+.login-container h2, .register-container h2 {
+    color: #00b7ff;
+}
+
+/* Mensaje de acción en ambos formularios */
+.message {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
