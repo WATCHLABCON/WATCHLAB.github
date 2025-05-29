@@ -1,109 +1,356 @@
- /* Reset básico */
+/* ===== STYLES2.CSS - Registro WATCHLAB ===== */
+
+/* Reset y fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos generales para el fondo */
+/* Fondo cinematográfico con gradiente violeta/dorado */
 body, html {
     height: 100%;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, 
+        #0f0f0f 0%, 
+        #2a1810 20%, 
+        #3d2914 40%, 
+        #1e1a2e 60%, 
+        #0a0a0a 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin: 0;
+    position: relative;
 }
 
-/* Contenedor del fondo animado */
-.background {
-    position: absolute;
+/* Efectos de fondo animados - tonos dorados */
+body::before {
+    content: '';
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('IMG/fondo.jpeg'); /* Ruta de la imagen */
-    background-size: cover;
-    background-position: center;
-    animation: backgroundAnimation 20s infinite linear; /* Animación de fondo */
-    z-index: -1; /* Esto asegura que el fondo esté detrás del contenido */
+    background: 
+        radial-gradient(circle at 25% 45%, rgba(255, 193, 7, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 75% 25%, rgba(255, 107, 107, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 45% 75%, rgba(156, 39, 176, 0.1) 0%, transparent 50%);
+    animation: floatingLights 10s ease-in-out infinite alternate;
+    z-index: -2;
 }
 
-/* Animación de desplazamiento de fondo */
-@keyframes backgroundAnimation {
-    0% {
-        background-position: center;
-    }
-    50% {
-        background-position: top left;
-    }
-    100% {
-        background-position: center;
-    }
+/* Partículas de fondo - efecto estrellado */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 25px 35px, rgba(255,193,7,0.3), transparent),
+        radial-gradient(1px 1px at 45px 75px, rgba(255,255,255,0.1), transparent),
+        radial-gradient(1px 1px at 95px 45px, rgba(255,193,7,0.2), transparent),
+        radial-gradient(2px 2px at 135px 85px, rgba(255,255,255,0.05), transparent);
+    background-repeat: repeat;
+    background-size: 180px 120px;
+    animation: sparkleGold 4s linear infinite;
+    z-index: -1;
 }
 
-/* Estilos generales para los formularios de inicio de sesión */
-.container {
+@keyframes floatingLights {
+    0% { transform: translateY(0px) rotate(0deg); opacity: 0.8; }
+    100% { transform: translateY(-30px) rotate(15deg); opacity: 1; }
+}
+
+@keyframes sparkleGold {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-120px); }
+}
+
+/* Logo y branding */
+.brand-logo {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ffd93d;
+    text-shadow: 0 0 20px rgba(255, 217, 61, 0.6);
+    letter-spacing: 3px;
+    z-index: 10;
+}
+
+/* Contenedor principal del formulario */
+.container, body {
     position: relative;
-    z-index: 1; /* Asegura que el contenido esté encima del fondo */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 183, 255, 0.2);
-    width: 320px;
+}
+
+/* Para el body que no tiene .container */
+body > h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #ffd93d, #ffb74d, #ff6b6b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 10px rgba(255, 217, 61, 0.4);
+}
+
+body > form {
+    background: rgba(25, 20, 15, 0.95);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 193, 7, 0.2);
+    padding: 3rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.4),
+        0 0 50px rgba(255, 193, 7, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    width: 420px;
     text-align: center;
+    transition: all 0.3s ease;
+    animation: slideInUp 0.6s ease-out;
 }
 
-.container h2 {
-    margin-bottom: 1rem;
-    color: #00b7ff;
+body > form:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 35px 70px rgba(0, 0, 0, 0.5),
+        0 0 70px rgba(255, 193, 7, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
-.container input {
+/* Contenedor con clase */
+.container {
+    background: rgba(25, 20, 15, 0.95);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 193, 7, 0.2);
+    padding: 3rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.4),
+        0 0 50px rgba(255, 193, 7, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    width: 420px;
+    text-align: center;
+    transition: all 0.3s ease;
+    animation: slideInUp 0.6s ease-out;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 35px 70px rgba(0, 0, 0, 0.5),
+        0 0 70px rgba(255, 193, 7, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+/* Títulos */
+h2, .container h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #ffd93d, #ffb74d, #ff6b6b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 10px rgba(255, 217, 61, 0.4);
+}
+
+/* Inputs modernos */
+input, .container input {
     width: 100%;
-    padding: 0.6rem;
-    margin: 0.5rem 0;
-    border: none;
-    border-radius: 5px;
+    padding: 1rem 1.5rem;
+    margin: 0.8rem 0;
+    background: rgba(40, 30, 20, 0.8);
+    border: 1px solid rgba(255, 193, 7, 0.2);
+    border-radius: 12px;
     font-size: 1rem;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+    outline: none;
 }
 
-.container button {
+input::placeholder, .container input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 300;
+}
+
+input:focus, .container input:focus {
+    border-color: #ffd93d;
+    box-shadow: 
+        0 0 0 3px rgba(255, 217, 61, 0.15),
+        0 0 20px rgba(255, 217, 61, 0.3);
+    background: rgba(50, 40, 25, 0.9);
+}
+
+/* Botón principal con efectos dorados */
+button, .container button {
     width: 100%;
-    padding: 0.7rem;
-    background-color: #00b7ff;
-    color: white;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    background: linear-gradient(135deg, #ffd93d, #ffb74d);
+    color: #1a1a1a;
     border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-weight: bold;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
     cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.container button:hover {
-    background-color: #008fc7;
+button::before, .container button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
 }
 
-/* Mensajes de error y bienvenida */
+button:hover::before, .container button:hover::before {
+    left: 100%;
+}
+
+button:hover, .container button:hover {
+    background: linear-gradient(135deg, #ffcc02, #ffa726);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(255, 193, 7, 0.4);
+}
+
+button:active, .container button:active {
+    transform: translateY(0);
+}
+
+/* Mensajes de error y éxito elegantes */
+#errorMessage, #registerMessage {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-weight: 500;
+    min-height: 20px;
+}
+
 .error {
-    color: #ff4d4d;
-    margin-top: 10px;
+    background: rgba(244, 67, 54, 0.15);
+    border: 1px solid rgba(244, 67, 54, 0.4);
+    color: #ff8a80;
 }
 
+.success {
+    background: rgba(76, 175, 80, 0.15);
+    border: 1px solid rgba(76, 175, 80, 0.4);
+    color: #a5d6a7;
+}
+
+/* Enlaces estilizados */
+p {
+    margin-top: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+}
+
+a {
+    color: #ffd93d;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: linear-gradient(135deg, #ffd93d, #ff6b6b);
+    transition: width 0.3s ease;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+a:hover {
+    color: #ff6b6b;
+    text-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+}
+
+/* Efectos de carga */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.loading button {
+    background: linear-gradient(135deg, #999, #bbb);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .container, body > form {
+        width: 90%;
+        padding: 2rem 1.5rem;
+    }
+    
+    .brand-logo {
+        font-size: 2rem;
+        top: 20px;
+    }
+    
+    h2 {
+        font-size: 1.7rem;
+    }
+}
+
+/* Animaciones de entrada */
+.container, body > form {
+    animation: slideInUp 0.6s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Estilos para mensajes de bienvenida */
 .welcome {
     font-size: 2rem;
     margin-bottom: 2rem;
     color: #ffffff;
     text-align: center;
+    font-family: 'Cinzel', serif;
 }
 
-/* Estilos para la vista de Login y Registro */
+/* Estilos adicionales para compatibilidad */
 .login-container h2, .register-container h2 {
-    color: #00b7ff;
+    color: #ffd93d;
 }
 
-/* Mensaje de acción en ambos formularios */
 .message {
     margin-top: 10px;
     font-size: 0.9rem;
